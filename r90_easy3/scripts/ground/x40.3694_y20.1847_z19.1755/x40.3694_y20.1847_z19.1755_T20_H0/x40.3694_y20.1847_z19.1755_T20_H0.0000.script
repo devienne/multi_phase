@@ -1,0 +1,22 @@
+ReadMesh 1 /multi-phase/spherical/p0/r90_easy3/mesh/x40.3694_y20.1847_z19.1755/x40.3694_y20.1847_z19.1755.pat
+
+SetSubDomain 1 Ms 1273e3 
+SetSubDomain 1 Aex 1.13e-11 
+SetSubDomain 1 K1 1e3 
+Cubic Anisotropy SD = 1 
+SetSubDomain 2 Ms 1390e3 
+SetSubDomain 2 Aex 1.13e-11 
+SetSubDomain 2 K1 1370e3 
+Uniaxial Anisotropy SD = 2 
+EasyAxis 0 0 1 SD = 2 
+Uniform Magnetization 1 0 0 SD = 1 
+Uniform Magnetization 0 0 -1 SD = 2 
+External Field Strength 0 mT
+EnergyLog /multi-phase/spherical/p0/r90_easy3/energy/ground/x40.3694_y20.1847_z19.1755/x40.3694_y20.1847_z19.1755_T20_H0/x40.3694_y20.1847_z19.1755_T20_H0.0000
+Minimize
+WriteHyst /multi-phase/spherical/p0/r90_easy3/hyst/ground/x40.3694_y20.1847_z19.1755/x40.3694_y20.1847_z19.1755_T20/x40.3694_y20.1847_z19.1755_T200000
+WriteMagnetization /multi-phase/spherical/p0/r90_easy3/domain/ground/x40.3694_y20.1847_z19.1755/x40.3694_y20.1847_z19.1755_T20_H0/x40.3694_y20.1847_z19.1755_T20_H0.0000
+CloseLog
+Set PathN 1
+MagnetizationToPath 1
+PathStructureEnergies /multi-phase/spherical/p0/r90_easy3/energy/ground/x40.3694_y20.1847_z19.1755/x40.3694_y20.1847_z19.1755_T20_H0/x40.3694_y20.1847_z19.1755_T20_H0.0000.txt
