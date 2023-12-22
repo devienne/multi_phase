@@ -1,0 +1,8 @@
+create sphere radius 0.1 
+volume 1 scale x 0.0807388 y 0.0403694 z 0.0383509 
+volume 1 scheme tetmesh 
+volume 1 size 0.0027 
+mesh volume 1 
+block 101 volume all 
+block all element type tetra4  
+export patran "C:/multi-phase/spherical/p0/r100_easy1/mesh/x8.07388_y4.03694_z3.83509/x8.07388_y4.03694_z3.83509.pat" overwrite
