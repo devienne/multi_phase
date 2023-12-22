@@ -1,0 +1,17 @@
+ReadMesh 1 /multi-phase/spherical/p0/r100_easy3/mesh/x8.07388_y4.03694_z3.83509/x8.07388_y4.03694_z3.83509.pat
+
+Set Ms 1390e3 
+Set Aex 1.13e-11 
+Set K1 1370e3 
+Uniaxial Anisotropy 
+EasyAxis 0 0 1 
+Uniform Magnetization 1 0 0  
+External Field Strength 0 mT
+EnergyLog /multi-phase/spherical/p0/r100_easy3/energy/ground/x8.07388_y4.03694_z3.83509/x8.07388_y4.03694_z3.83509_T20_H0/x8.07388_y4.03694_z3.83509_T20_H0.0000
+Minimize
+WriteHyst /multi-phase/spherical/p0/r100_easy3/hyst/ground/x8.07388_y4.03694_z3.83509/x8.07388_y4.03694_z3.83509_T20/x8.07388_y4.03694_z3.83509_T200000
+WriteMagnetization /multi-phase/spherical/p0/r100_easy3/domain/ground/x8.07388_y4.03694_z3.83509/x8.07388_y4.03694_z3.83509_T20_H0/x8.07388_y4.03694_z3.83509_T20_H0.0000
+CloseLog
+Set PathN 1
+MagnetizationToPath 1
+PathStructureEnergies /multi-phase/spherical/p0/r100_easy3/energy/ground/x8.07388_y4.03694_z3.83509/x8.07388_y4.03694_z3.83509_T20_H0/x8.07388_y4.03694_z3.83509_T20_H0.0000.txt
