@@ -1,0 +1,33 @@
+create sphere radius 0.1 
+volume 1 scale x 0.419842 y 0.209921 z 0.199425 
+create brick x 0.1 
+volume 2 scale 0.839683 
+volume 2 move 0.0419842 
+subtract volume 1 from volume 2 
+volume 2 copy 
+volume 2 reflect x 
+create brick x 0.1 
+volume 4 scale x 1.67937 y 0.839683 
+subtract volume 3 from volume 4 
+subtract volume 2 from volume 4 
+split body 4 
+delete volume 6 
+delete volume 7 
+volume 5 copy 
+create sphere radius 0.1 
+volume 9 scale 0.419842 
+volume 9 move y 0.0419842 
+subtract volume 9 from volume 5 
+create sphere radius 0.1 
+volume 10 scale 0.419842 
+volume 10 move y 0.0419842 
+intersect volume 10,8 
+block 1 volume 5 
+block 2 volume 8 
+imprint volume 5 8 
+merge volume 5 8 
+volume 5 8 scheme tetmesh 
+volume 5 8 size 0.003 
+mesh volume 5 8 
+block all element type tetra4  
+export patran "C:/multi-phase/spherical/p90/r50_easy2/mesh/x41.9842_y20.9921_z19.9425/x41.9842_y20.9921_z19.9425.pat" overwrite
